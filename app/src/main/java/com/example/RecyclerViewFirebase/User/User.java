@@ -1,4 +1,4 @@
-package com.example.recyclerviewfirebase.User;
+package com.example.RecyclerViewFirebase.User;
 
 public class User {
     private String name;

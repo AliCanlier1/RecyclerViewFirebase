@@ -1,4 +1,4 @@
-package com.example.recyclerviewfirebase;
+package com.example.RecyclerViewFirebase;
 
 public interface IRestaurantInterface {
     public void onItemClicked(int position);

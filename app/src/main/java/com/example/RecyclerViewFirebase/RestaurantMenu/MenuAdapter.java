@@ -1,4 +1,4 @@
-package com.example.recyclerviewfirebase.RestaurantMenu;
+package com.example.RecyclerViewFirebase.RestaurantMenu;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,8 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.recyclerviewfirebase.R;
-import com.example.recyclerviewfirebase.User.UserAdapter;
+import com.example.RecyclerViewFirebase.R;
 
 import java.util.ArrayList;
 

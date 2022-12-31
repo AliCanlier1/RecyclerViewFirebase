@@ -1,4 +1,4 @@
-package com.example.recyclerviewfirebase;
+package com.example.RecyclerViewFirebase;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
@@ -9,14 +9,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.recyclerviewfirebase.User.User;
+import com.example.recyclerviewfirebase.R;
+import com.example.recyclerviewfirebase.databinding.ActivityMapsBinding;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.example.recyclerviewfirebase.databinding.ActivityMapsBinding;
+import com.example.RecyclerViewFirebase.databinding.ActivityMapsBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -24,7 +25,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class UserLocationActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     private ActivityMapsBinding binding;
@@ -55,16 +56,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 Map<String, Object> userLocation = new HashMap<>();
                 userLocation.put("Latitude",37.161496313430575);
                 userLocation.put("Longitude",28.37597874644133);
+
                 db.collection("User Locations").document()
                         .set(userLocation).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 if(task.isSuccessful()){
-                                    Toast.makeText(MapsActivity.this,"Locations informations are added!", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(UserLocationActivity.this,"Locations informations are added!", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
-                Intent intent = new Intent(MapsActivity.this, UserActivity.class);
+                Intent intent = new Intent(UserLocationActivity.this, UserActivity.class);
                 startActivity(intent);
             }
         });

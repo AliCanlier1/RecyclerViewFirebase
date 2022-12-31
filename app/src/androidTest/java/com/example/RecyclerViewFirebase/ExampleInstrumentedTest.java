@@ -1,4 +1,4 @@
-package com.example.recyclerviewfirebase;
+package com.example.RecyclerViewFirebase;
 
 import android.content.Context;
 

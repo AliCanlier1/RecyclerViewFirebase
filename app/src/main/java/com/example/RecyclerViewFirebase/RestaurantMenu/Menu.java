@@ -1,4 +1,4 @@
-package com.example.recyclerviewfirebase.RestaurantMenu;
+package com.example.RecyclerViewFirebase.RestaurantMenu;
 
 public class Menu {
     private String name;
